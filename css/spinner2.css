@@ -1,0 +1,55 @@
+/*meglio usare nth-child per i 3 div oppure 1 elemento con after e before*/
+
+
+body {
+    animation: bg 2s infinite;
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    color: black;
+    animation: title 2s infinite;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.spinner {
+    margin: 100px auto 0;
+    width: 70px;
+    text-align: center;
+}
+  
+.spinner > div {
+    width: 20px;
+    height: 18px;
+    background-color: red;
+    display: inline-block;
+    animation: sk-bouncedelay 1.4s infinite;
+}
+  
+.spinner .bounce1 {
+   animation-delay: -0.32s;
+}
+  
+.spinner .bounce2 {
+    animation-delay: -0.86s;
+}
+  
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1.0); }
+}
+
+@keyframes bg{
+    40% {background: black;}
+}
+
+@keyframes title{
+    40% {
+        color: white;
+        padding-top:210px;
+    }
+}
